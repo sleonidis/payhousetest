@@ -33,6 +33,9 @@ Route::group(['middleware'=>'auth', 'prefix'=>'admin'], function (){
     Route::delete('/offer/{offer}/delete','App\Http\Controllers\Admin\OffersController@delete')->name('admin.offers.delete');
     Route::get('/offer/create','App\Http\Controllers\Admin\OffersController@create')->name('admin.offers.create');
     Route::post('/offer/store','App\Http\Controllers\Admin\OffersController@store')->name('admin.offers.store');
+    //
+    Route::get('/stats','App\Http\Controllers\Admin\StatController@index')->name('admin.offers.stats');
+
 
 });
 

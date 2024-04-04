@@ -18,7 +18,7 @@ class OffersController extends Controller
 
     public function show(Offer $offer)
     {
-        $has_offer=UserOffer::query()->where('offer_id','=',$offer->id)->exists();
+        $has_offer=UserOffer::query()->where('user_id','=',auth()->user()->id)->exists();
         $personal_link='';
 
         if($has_offer)

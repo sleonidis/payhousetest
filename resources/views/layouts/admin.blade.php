@@ -18,7 +18,7 @@
                 'active'=>false
                 ],
                 [
-                'link'=>'#',
+                'link'=>route('admin.offers.stats'),
                 'title'=>'Статистика',
                 'active'=>false
                 ],
