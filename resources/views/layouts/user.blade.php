@@ -1,0 +1,32 @@
+@extends('layouts.wrapper')
+@section('sidebar')
+    @php
+        $navs=[
+                [
+                'link'=>'#',
+                'title'=>'Профиль',
+                'active'=>false
+                ],
+                [
+                'link'=>'#',
+                'title'=>'Новости',
+                'active'=>false
+                ],
+                [
+                'link'=>route('user.offers.index'),
+                'title'=>'Офферы',
+                'active'=>false
+                ],
+                [
+                'link'=>route('user.stat.index'),
+                'title'=>'Статистика',
+                'active'=>false
+                ],
+                [
+                'link'=>route('logout'),
+                'title'=>'Выйти',
+                'active'=>false
+                ],
+            ];
+    @endphp
+@endsection
