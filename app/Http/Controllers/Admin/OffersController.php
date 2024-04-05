@@ -26,7 +26,6 @@ class OffersController extends Controller
 
     public function create()
     {
-        dd(1);
         return view('pages.admin.offers.create');
     }
 
