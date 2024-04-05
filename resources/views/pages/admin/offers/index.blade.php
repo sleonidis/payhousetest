@@ -20,7 +20,11 @@
                         <img class="w-100" style="height: 200px; object-fit: cover" src="{{$offer->image}}">
                     </div>
                     <div class="card-footer">
-                        <p>
+                        <p style="overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;">
                             {{$offer->description}}
                         </p>
                         <a href="{{route('admin.offers.show', $offer->id)}}">

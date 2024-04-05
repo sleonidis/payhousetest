@@ -23,7 +23,7 @@
                 'active'=>false
                 ],
                 [
-                'link'=>route('logout'),
+                'link'=>route('logout.get'),
                 'title'=>'Выйти',
                 'active'=>false
                 ],
