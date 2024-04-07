@@ -8,8 +8,14 @@
         @foreach($offers as $offer)
             <div class="col-4">
                 <div class="card">
-                    <div class="card-header">
-                        {{$offer->title}}
+                    <div class="card-header d-flex" style="height: 65px">
+                        <p class="m-auto text-start w-100" style="overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;">
+                            {{$offer->title}}
+                        </p>
                     </div>
                     <div class="card-body p-0">
                         <img class="w-100" style="height: 200px; object-fit: cover" src="{{$offer->image}}">

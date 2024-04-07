@@ -5,10 +5,10 @@
     <div class="card">
         <div class="card-header">
             <div class="row justify-content-between">
-                <h4 class="col-8">
+                <h4 class="col-7">
                     {{$offer->title}}
                 </h4>
-                <a href="{{route('admin.offers.edit', $offer->id)}}" class="col-2">{{__('редактировать')}}</a>
+                <a href="{{route('admin.offers.edit', $offer->id)}}" class="col-3">{{__('редактировать')}}</a>
                 <form method="post" action="{{route('admin.offers.delete', $offer->id)}}" class="col-2">
                     @csrf
                     @method('delete')
