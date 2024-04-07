@@ -42,6 +42,9 @@ Route::group(['middleware'=>['auth', \App\Http\Middleware\AdminMiddleware::class
 //REDIRECT
 Route::get('/redirect/{link}', 'App\Http\Controllers\RedirectController@index')->name('redirector');
 
+//TEST
+Route::get('/test', 'App\Http\Controllers\TestController@index')->name('test');
+
 Route::get('logout', function (){auth()->logout(); return redirect()->route('login');})->name('logout.get');
 
 
