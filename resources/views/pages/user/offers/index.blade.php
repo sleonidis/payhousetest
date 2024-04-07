@@ -25,7 +25,7 @@
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-line-clamp: 4;
-	-webkit-box-orient: vertical;">
+	-webkit-box-orient: vertical; height: 96px">
                             {{$offer->description}}
                         </p>
                         <a href="{{route('user.offers.show', $offer->id)}}">
