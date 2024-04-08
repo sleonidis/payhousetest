@@ -15,6 +15,22 @@ class RedirectController extends Controller
         $redirect_link=$offer->link;
 
         $user_offer->clicks=$user_offer->clicks+1;
+
+        $hosts=json_decode($user_offer->host);
+
+        if($hosts==null)
+        {
+            $hosts[] = $_SERVER['REMOTE_ADDR'];
+            $user_offer->host=json_encode($hosts);
+            $user_offer->host_count=$user_offer->host_count+1;
+        }
+        elseif (!in_array($_SERVER['REMOTE_ADDR'], $hosts))
+        {
+            $hosts[] = $_SERVER['REMOTE_ADDR'];
+            $user_offer->host=json_encode($hosts);
+            $user_offer->host_count=$user_offer->host_count+1;
+        }
+
         $user_offer->update();
         //dd($user_offer);
 

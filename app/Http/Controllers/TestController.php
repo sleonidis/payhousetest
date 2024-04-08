@@ -14,7 +14,7 @@ class TestController extends Controller
         #LID: https://nutra-google.online/qSvkMJ
         $response = $client->post('https://api.cpa.house/method/send_order', [
             'form_params' => [
-                'api_key' => 'P7Ym255JfA94yQ6KEAWwP4upsIMVBdcNJ90DehbnoR31hURbTs7U0El8at8MLLFH',
+                'api_key' => '7s0pmKvFnmOidJS5rrXAIYltUp1qc1wjWAgN6h5DkfZHuZf6gMGQa8di3nW2obOl',
                 'id_webmaster' => '11',
                 'ip_address' => '192.0.0.1',
                 'name' => 'test',

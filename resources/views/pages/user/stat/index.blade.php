@@ -9,6 +9,7 @@
                     <th scope="col">#</th>
                     <th scope="col">{{__('Title')}}</th>
                     <th scope="col">{{__('Клики')}}</th>
+                    <th scope="col">{{__('Хосты')}}</th>
                     <th scope="col">{{__('Ссылка')}}</th>
                 </tr>
                 </thead>
@@ -18,6 +19,7 @@
                         <th scope="row">{{$offer->id}}</th>
                         <td>{{$offer->title}}</td>
                         <td>{{$offer->clicks}}</td>
+                        <td>{{$offer->host_count}}</td>
                         <td>{{route('redirector',$offer->link)}}</td>
                     </tr>
                 @endforeach

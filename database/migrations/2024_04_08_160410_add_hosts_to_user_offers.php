@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_offers', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->integer('user_id');
-            $table->integer('offer_id');
-            $table->string('link');
-            $table->unsignedBigInteger('clicks')->default(0);
+        Schema::table('user_offers', function (Blueprint $table) {
+            $table->json('host');
+            $table->unsignedBigInteger('host_count')->default(0);
         });
     }
 
@@ -26,6 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_offers');
+        Schema::table('user_offers', function (Blueprint $table) {
+            $table->dropColumn('host');
+            $table->dropColumn('host_count');
+        });
     }
 };
