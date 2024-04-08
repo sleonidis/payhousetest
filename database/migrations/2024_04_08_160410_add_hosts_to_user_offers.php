@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('user_offers', function (Blueprint $table) {
-            $table->json('host');
+            $table->json('host')->nullable();
             $table->unsignedBigInteger('host_count')->default(0);
         });
     }
